@@ -1,0 +1,12 @@
+<div class="container main-banner">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let image of bannerImages">
+      <div class="card">
+        <img [src]="image" class="card-img-top" alt="Banner Image">
+        <div class="card-body">
+          <h5 class="card-title">Titolo</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
