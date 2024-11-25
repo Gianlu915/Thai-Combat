@@ -1,0 +1,40 @@
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; 
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  li{
+    font-weight: bold;
+  }
+
+  .nav-icons{
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-icons img{
+   width: 20px;
+   height: 20px;
+  }
+
+/* Nascondi le icone nel menu per dispositivi più piccoli */
+@media (max-width: 991px) {
+    .nav-icons {
+      display: none !important; /* Nascondi le icone nel navbar */
+    }
+  
+    .navbar-nav .nav-item:last-child .dropdown-menu {
+      display: none;
+    }
+  }
+  
+
+  
+  

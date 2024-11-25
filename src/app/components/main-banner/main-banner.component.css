@@ -1,11 +1,11 @@
 .card{
     border-radius: 5px;
-    background-color: #ffededb6;
+    background-color: #fffaedb6;
 }
 
 .card img {
-    max-height: 100%; /* L'immagine non supera l'altezza */
-    object-fit: fill; /* Adatta l'immagine interamente alla card */
+    max-height: 100%;
+    object-fit: fill;
 }
 
 .card button{
