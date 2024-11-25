@@ -1,0 +1,4 @@
+.card img {
+    height: 400px; /* Altezza uniforme per le immagini */
+    object-fit: cover; /* Taglia l'immagine se è più grande */
+  }
