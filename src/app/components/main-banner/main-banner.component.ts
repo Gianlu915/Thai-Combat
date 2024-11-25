@@ -4,20 +4,24 @@ import { ImagesService } from '../../services/images.service';
 @Component({
   selector: 'app-main-banner',
   templateUrl: './main-banner.component.html',
-  styleUrl: './main-banner.component.css'
+  styleUrls: ['./main-banner.component.css']
 })
 export class MainBannerComponent implements OnInit {
 
-  bannerImages: string[] = [];
+  bannerItems: { image: string, buttonName: string }[] = [];
+  bannerButtons: string[] = ['Fairtex', 'Yokkao', 'Leone'];
 
-  constructor(private imagesService: ImagesService){}
-
+  constructor(private imagesService: ImagesService) {}
 
   ngOnInit(): void {
     this.imagesService.getBannerImages().subscribe({
       next: (res) => {
-        console.log('Immagini ricevute:', res);  // Verifica cosa ricevi dal server
-        this.bannerImages = res;
+        console.log('Immagini ricevute:', res);
+        // Associa ogni immagine al nome del bottone
+        this.bannerItems = res.map((image, index) => ({
+          image,
+          buttonName: this.bannerButtons[index] || 'Default'  // Assegna un nome di bottone di default se non ci sono abbastanza bottoni
+        }));
       },
       error: (err) => {
         console.error('Errore nel recupero delle immagini:', err);

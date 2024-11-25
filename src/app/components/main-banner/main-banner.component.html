@@ -1,10 +1,10 @@
 <div class="container main-banner">
   <div class="row">
-    <div class="col-md-4" *ngFor="let image of bannerImages">
+    <div class="col-md-4" *ngFor="let item of bannerItems">
       <div class="card">
-        <img [src]="image" class="card-img-top" alt="Banner Image">
-        <div class="card-body">
-          <h5 class="card-title">Titolo</h5>
+        <img [src]="item.image" class="card-img-top" alt="Banner Image">
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <button class="btn btn-primary">{{item.buttonName}}</button>
         </div>
       </div>
     </div>

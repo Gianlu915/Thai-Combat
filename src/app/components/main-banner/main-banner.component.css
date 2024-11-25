@@ -1,4 +1,15 @@
+.card{
+    border-radius: 5px;
+    background-color: #ffededb6;
+}
+
 .card img {
-    height: 400px; /* Altezza uniforme per le immagini */
-    object-fit: cover; /* Taglia l'immagine se è più grande */
-  }
+    max-height: 100%; /* L'immagine non supera l'altezza */
+    object-fit: fill; /* Adatta l'immagine interamente alla card */
+}
+
+.card button{
+    background-color: rgb(15, 169, 118);
+    border-color:rgb(10, 150, 100);
+    width: 60%;
+}
