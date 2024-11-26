@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MainBannerComponent } from './components/main-banner/main-banner.component';
+import { MainSliderComponent } from './components/main-slider/main-slider.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { MainBannerComponent } from './components/main-banner/main-banner.compon
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    MainBannerComponent
+    MainBannerComponent,
+    MainSliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
