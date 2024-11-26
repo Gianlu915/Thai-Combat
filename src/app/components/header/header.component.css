@@ -1,40 +1,138 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dropdown Menu */
 .nav-item.dropdown:hover .dropdown-menu {
-    display: block; 
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
-  .dropdown-menu {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-  li{
-    font-weight: bold;
-  }
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-  .nav-icons{
+li {
+  font-weight: bold;
+}
+
+.navbar-brand img{
+  width: 100%;
+}
+
+.nav-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-icons, .nav-icons-mobile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-toggler {
+  border: 1px solid #ccc; 
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: 1px solid #161515;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  border: none;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: transparent;  /* Imposta lo sfondo trasparente */
+  color: inherit;  /* Mantiene il colore del testo originale */
+  border: none; /* Rimuove il bordo di focus */
+  font-weight: bold;
+}
+
+
+
+/* Gestione del Menu Hamburger a 700px */
+@media (max-width: 700px) {
+
+  .navbar{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
   }
 
-  .nav-icons img{
-   width: 20px;
-   height: 20px;
+  .navbar-expand .navbar-collapse.collapse {
+    display: block; 
   }
 
-/* Nascondi le icone nel menu per dispositivi più piccoli */
-@media (max-width: 991px) {
-    .nav-icons {
-      display: none !important; /* Nascondi le icone nel navbar */
-    }
-  
-    .navbar-nav .nav-item:last-child .dropdown-menu {
-      display: none;
-    }
+  .navbar-expand .navbar-toggler {
+    display: block; 
   }
-  
+}
 
-  
-  
+/* Gestione per schermi più larghi di 700px ma più piccoli di 992px */
+@media (min-width: 701px) and (max-width: 991px) {
+  .navbar-expand .navbar-collapse {
+    display: flex !important; 
+  }
+
+  .navbar-expand .navbar-toggler {
+    display: none; 
+  }
+}
+
+/* Gestione schermi più larghi di 992px (per .navbar-expand-lg) */
+@media (min-width: 992px) {
+  .navbar-expand .navbar-collapse {
+    display: flex !important; 
+  }
+
+  .navbar-expand .navbar-toggler {
+    display: none; 
+  }
+}
+
+/* Modifica l'ordine per schermi piccoli (fino a 767px) */
+@media (max-width: 767px) {
+  .navbar-brand {
+    order: 1; /* Il logo va dopo l'hamburger e le icone */
+  }
+
+  .navbar-toggler {
+    order: 0; /* Il bottone hamburger è il primo */
+  }
+
+  .nav-icons {
+    order: 2; /* Le icone vanno dopo l'hamburger ma prima del logo */
+  }
+}
+
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    width: 70%; /* Riduce la larghezza dell'immagine al 70% */
+    max-width: 150px; /* Imposta una larghezza massima per schermi piccoli */
+  }
+}
+
+/* Ulteriori modifiche per schermi molto piccoli (ad esempio, sotto i 480px) */
+@media (max-width: 480px) {
+  .navbar-brand img {
+    width: 60%; /* Riduce ulteriormente l'immagine al 60% */
+    max-width: 120px; /* Imposta una larghezza massima per schermi molto piccoli */
+  }
+}
