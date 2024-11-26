@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="assets/icons/muay-thai.png" alt="Logo">
@@ -52,10 +52,26 @@
 
     <!-- Icons -->
     <div class="nav-icons gap-4">
-      <a href="#"><img src="assets/icons/search-interface-symbol.png" alt=""></a>
+      <a (click)="toogleSearch()" href="#"><img src="assets/icons/search-interface-symbol.png" alt=""></a>
       <a href="#"><img src="assets/icons/market.png" alt="Cart"></a>
       <a href="#"><img src="assets/icons/user.png" alt="Sign or Register"></a>
     </div>
   </div>
 </nav>
+
+<div [ngClass]="{'show': isSearchVisible}" class="search-container d-flex justify-center align-items-center justify-content-between">
+  <div class="d-flex gap-2 search-input">
+    <a href="#" class="search-icon">
+      <img src="assets/icons/search-interface-symbol.png" alt="Search">
+    </a>
+    <input type="text" placeholder="SEARCH FOR..." id="searchInput">
+  </div>
+  <div>
+    <a (click)="toogleSearch()" href="#" class="search-icon">
+      <img src="assets/icons/clear.png" alt="Clear">
+    </a>
+  </div>
+</div>
+
+
 

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(180deg, #fbc2eb, #a6c1ee);
 }
 
 /* Dropdown Menu */
@@ -59,15 +60,51 @@ li {
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-  background-color: transparent;  /* Imposta lo sfondo trasparente */
-  color: inherit;  /* Mantiene il colore del testo originale */
-  border: none; /* Rimuove il bordo di focus */
+  background-color: transparent;
+  color: inherit;
+  border: none;
   font-weight: bold;
+}
+
+.search-container{
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+
+.search-input{
+  width: 100%;
+}
+
+input{
+  width: 100%;
+  border: none;
+}
+
+.search-input:hover,:focus{
+  outline: none;
+}
+
+.search-container,input{
+  background-color: rgb(255, 255, 255);
+}
+
+.search-container img{
+  width: 20px;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0s;
 }
 
 
 
-/* Gestione del Menu Hamburger a 700px */
+/* 700px */
 @media (max-width: 700px) {
 
   .navbar{
@@ -84,7 +121,7 @@ li {
   }
 }
 
-/* Gestione per schermi più larghi di 700px ma più piccoli di 992px */
+/* bigger than 700px smaller than 992px */
 @media (min-width: 701px) and (max-width: 991px) {
   .navbar-expand .navbar-collapse {
     display: flex !important; 
@@ -95,7 +132,7 @@ li {
   }
 }
 
-/* Gestione schermi più larghi di 992px (per .navbar-expand-lg) */
+/* bigger than 992px  */
 @media (min-width: 992px) {
   .navbar-expand .navbar-collapse {
     display: flex !important; 
@@ -106,33 +143,32 @@ li {
   }
 }
 
-/* Modifica l'ordine per schermi piccoli (fino a 767px) */
+
 @media (max-width: 767px) {
   .navbar-brand {
-    order: 1; /* Il logo va dopo l'hamburger e le icone */
+    order: 1;
   }
 
   .navbar-toggler {
-    order: 0; /* Il bottone hamburger è il primo */
+    order: 0;
   }
 
   .nav-icons {
-    order: 2; /* Le icone vanno dopo l'hamburger ma prima del logo */
+    order: 2;
   }
 }
 
 
 @media (max-width: 767px) {
   .navbar-brand img {
-    width: 70%; /* Riduce la larghezza dell'immagine al 70% */
-    max-width: 150px; /* Imposta una larghezza massima per schermi piccoli */
+    width: 70%; 
+    max-width: 150px;
   }
 }
 
-/* Ulteriori modifiche per schermi molto piccoli (ad esempio, sotto i 480px) */
 @media (max-width: 480px) {
   .navbar-brand img {
-    width: 60%; /* Riduce ulteriormente l'immagine al 60% */
-    max-width: 120px; /* Imposta una larghezza massima per schermi molto piccoli */
+    width: 60%;
+    max-width: 120px;
   }
 }
