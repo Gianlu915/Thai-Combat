@@ -9,31 +9,30 @@ export class MainSliderComponent {
 
   slides = [
     {img: "assets/images/TIGER_FAMILY-_yokkao-1.webp"},
-    {img: "assets/images/2020_04_chisiamo_kerman_1387.jpg"},
+    {img: "assets/images/web_banner_-_dragon_-_small_d107129c-c619-40ec-9d62-759931a2611a.webp"},
     {img: "assets/images/original_-_banner_-_detail-desktop.webp"},
-    {img: "assets/images/Ferrari-Fairtex-ONE.webp"}
+    {img: "assets/images/Yokkao_-_LATE_SHOW_-_banner_-_desktop.webp"}
   ];
 
   sliderConfig = {
-    infinite: true,          // Ciclo infinito
-    slidesToShow: 1,         // Numero di slide da mostrare alla volta
-    slidesToScroll: 1,       // Numero di slide da scrollare alla volta
-    autoplay: true,          // Autoplay attivo
-    autoplaySpeed: 1000,     // Velocità autoplay in millisecondi
-    arrows: true,            // Mostra frecce di navigazione
-    dots: true,              // Mostra i puntini di navigazione
-    responsive: [            // Configurazione responsiva per diverse dimensioni di schermo
+    infinite: true,          
+    slidesToShow: 1,         
+    slidesToScroll: 1,       
+    autoplay: true, 
+    autoplaySpeed: 4000,              
+    dots: true,              
+    responsive: [            
       {
-        breakpoint: 1024,    // Per schermi con larghezza >= 1024px
+        breakpoint: 1024, 
         settings: {
-          slidesToShow: 1,   // Mostra 2 slide
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 600,     // Per schermi con larghezza >= 600px
+        breakpoint: 600,   
         settings: {
-          slidesToShow: 1,   // Mostra 1 slide
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       }

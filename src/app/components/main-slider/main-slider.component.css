@@ -8,12 +8,11 @@
 
   .slider {
     width: 100%; /* Il contenitore occupa tutta la larghezza disponibile */
-    height: 700px; /* Altezza fissa per tutte le immagini */
     overflow: hidden; /* Nasconde eventuali porzioni di immagine fuori dal contenitore */
   }
 
   .slider img {
     width: 100%; /* Le immagini occupano tutta la larghezza del contenitore */
     height: 100%; /* Le immagini occupano tutta l'altezza del contenitore */
-    object-fit: cover; /* Le immagini coprono il contenitore senza distorsioni */
+    object-fit: cover;
   }
