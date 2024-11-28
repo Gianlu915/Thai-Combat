@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShadowService } from '../../services/shadow.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(private shadowService: ShadowService){}
+
   isSearchVisible = false;
+  isShadowActive = false;
 
   toogleSearch() {
     this.isSearchVisible = !this.isSearchVisible;
+    this.shadowService.toggleShadow();
   }
 }

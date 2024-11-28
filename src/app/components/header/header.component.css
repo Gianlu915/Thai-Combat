@@ -71,7 +71,7 @@ li {
   border-radius: 3px;
   padding: 20px;
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   opacity: 0;
   height: 0;
