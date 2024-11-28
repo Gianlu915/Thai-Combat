@@ -131,6 +131,26 @@ input{
   z-index: -1; /* Rende l'ombra dietro il contenuto */
 }
 
+.nav-icons{
+  position: relative;
+}
+
+.cart-items{
+  position: absolute;
+  top: 0px;
+  left: 58px;
+  background-color: red;
+  border-radius: 9px;
+  font-size: 12px;
+  width: 9px;
+  height: 12px;
+  display: flex; /* Usa flexbox per centrare */
+  justify-content: center; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  font-size: 12px; /* Imposta la dimensione del testo */
+  color: whitesmoke;
+}
+
 
 
 /* 700px */
