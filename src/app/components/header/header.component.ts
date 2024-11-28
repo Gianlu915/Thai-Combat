@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ShadowService } from '../../services/shadow.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { ShadowService } from '../../services/shadow.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  @ViewChild('searchInput') searchInput!: ElementRef;
 
   constructor(private shadowService: ShadowService){}
 
@@ -16,5 +17,8 @@ export class HeaderComponent {
   toogleSearch() {
     this.isSearchVisible = !this.isSearchVisible;
     this.shadowService.toggleShadow();
+    if(!this.isSearchVisible) {
+      this.searchInput.nativeElement.value = '';
+    }
   }
 }
