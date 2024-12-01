@@ -1,0 +1,75 @@
+div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h5{
+    font-weight: 600;
+}
+
+p{
+    font-weight: 200;
+}
+
+div button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: white;
+    background-color: black;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 0;
+    transform: translateX(-101%); /* Inizialmente fuori a sinistra */
+    transition: transform 0.7s ease; /* Transizione per il movimento da sinistra a destra */
+}
+
+button span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+button:hover::before {
+    transform: translateX(0);
+    color: black; /* Cambia il colore del testo */
+}
+
+button:hover span {
+    color: black; /* Cambia il colore del testo */
+}
+
+
+.sale{
+    font-weight: bold;
+}
+
+@media (max-width: 490px) {
+
+    h5{
+       font-size: 13px;
+    }
+
+    p{
+        font-size: 10px;
+    }
+
+    div button {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    
+}
