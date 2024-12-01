@@ -17,9 +17,9 @@ export class MainBannerComponent implements OnInit {
     this.imagesService.getBannerImages().subscribe({
       next: (res) => {
         console.log('Immagini ricevute:', res);
-        // Associa ogni immagine al nome del bottone
+        // Associa ogni immagine al nome del bottone e ottieni l'URL completo per l'immagine
         this.bannerItems = res.map((image, index) => ({
-          image,
+          image: this.imagesService.getFullImageUrl(image), // Ottieni l'URL completo
           buttonName: this.bannerButtons[index] || 'Default'  // Assegna un nome di bottone di default se non ci sono abbastanza bottoni
         }));
       },
