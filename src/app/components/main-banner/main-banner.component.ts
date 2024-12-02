@@ -9,7 +9,7 @@ import { ImagesService } from '../../services/images.service';
 export class MainBannerComponent implements OnInit {
 
   bannerItems: { image: string, buttonName: string }[] = [];
-  bannerButtons: string[] = ['Fairtex', 'Yokkao', 'Leone'];
+  bannerButtons: string[] = ['Fairtex', 'Leone', 'Yokkao'];
 
   constructor(private imagesService: ImagesService) {}
 
