@@ -29,22 +29,22 @@ p{
 
 video {
     width: 100%;
+    height: 100%;
 }
 
 .sub{
     width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-
 
 .subscription{
     background-color: rgb(210, 194, 194);
     width: 100%;
     border: 1px solid black;
     border-radius: 3px;
-    margin-bottom: 30px;
     background-color: rgb(244, 241, 241);
-    padding: 10px;
+    padding: 20px;
 }
 
 button {
