@@ -1,0 +1,89 @@
+.muay-thai-course {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+.thai-course{
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+h3{
+font-weight: 600;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p{
+    font-weight: 200;
+}
+
+.course-options {
+    padding: 0 30px;
+    justify-content: space-between;
+}
+
+video {
+    width: 100%;
+}
+
+.sub{
+    width: 100%;
+}
+
+
+
+.subscription{
+    background-color: rgb(210, 194, 194);
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: rgb(244, 241, 241);
+    padding: 10px;
+}
+
+button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: white;
+    background-color: black;
+    z-index: 1;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 0;
+    transform: translateX(-101%);
+    transition: transform 0.7s ease;
+}
+
+button span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+button:hover::before {
+    transform: translateX(0);
+    color: black;
+}
+
+button:hover span {
+    color: black;
+}
+

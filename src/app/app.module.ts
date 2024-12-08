@@ -15,6 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ProductsComponent } from './components/product/product.component';
 import { FlashDealsComponent } from './components/flash-deals/flash-deals.component';
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
+import { TrainingCourseComponent } from './components/training-course/training-course.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BestSellersComponent } from './components/best-sellers/best-sellers.com
     MainSliderComponent,
     ProductsComponent,
     FlashDealsComponent,
-    BestSellersComponent
+    BestSellersComponent,
+    TrainingCourseComponent
   ],
   imports: [
     BrowserModule,
