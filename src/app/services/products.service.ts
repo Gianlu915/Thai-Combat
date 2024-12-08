@@ -16,4 +16,9 @@ export class ProductsService {
   getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl + '/products');
   }
+
+    // Metodo per ottenere solo i prodotti best seller (bestSeller = 1)
+    getBestSellers(): Observable<Product[]> {
+      return this.http.get<Product[]>(this.apiUrl + '/api/best-seller-products');
+    }
 }

@@ -1,8 +1,12 @@
 .card{
     border-radius: 5px;
     background-color: #fffaedb6;
-    height: 570px;
+    height: auto;
     background-color: black;
+}
+
+.card:hover{
+    cursor: pointer;
 }
 
 .card img {

@@ -14,6 +14,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import {MatCardModule} from '@angular/material/card';
 import { ProductsComponent } from './components/product/product.component';
 import { FlashDealsComponent } from './components/flash-deals/flash-deals.component';
+import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FlashDealsComponent } from './components/flash-deals/flash-deals.compon
     MainBannerComponent,
     MainSliderComponent,
     ProductsComponent,
-    FlashDealsComponent
+    FlashDealsComponent,
+    BestSellersComponent
   ],
   imports: [
     BrowserModule,

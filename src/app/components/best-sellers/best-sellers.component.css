@@ -1,0 +1,30 @@
+h3{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.slick-slider {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  max-width: 300px; /* Limita la larghezza delle card */
+  text-align: center; /* Centra il contenuto */
+  margin: 0 auto; /* Centra ogni card */
+}
+
+.slick-slider .product-img {
+  width: 100%; /* Imposta la larghezza al 100% del contenitore */
+  max-width: 300px; /* Imposta una larghezza massima se necessario */
+  height: auto; /* Mantiene il rapporto di aspetto originale */
+  object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
+  border-radius: 8px; /* Arrotonda i bordi per un effetto visivo migliore */
+}
+
+.product{
+  border-radius: 5px;
+}

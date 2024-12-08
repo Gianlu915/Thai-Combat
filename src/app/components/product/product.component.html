@@ -1,8 +1,12 @@
-<mat-card *ngFor="let product of products">
-    <mat-card-title><p>{{product.name}}</p></mat-card-title>
-    <mat-card-content>
-      <p>{{product.description}}</p>
-      <p>Price: {{product.price}}</p>
-      <p>Brand: {{product.brand}}</p>
-    </mat-card-content>
-  </mat-card>
+<div class="card">
+  <img [src]="'http://localhost:3000/uploads/products/' + product.category + '/' + product.brand + '/' + product.image_url" 
+       class="card-img-top" 
+       alt="Product Image">
+  
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <p class="card-text">Price: {{ product.price | currency }}</p>
+    <button class="btn btn-primary">Buy Now</button>
+  </div>
+</div>
