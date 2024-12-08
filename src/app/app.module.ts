@@ -16,6 +16,7 @@ import { ProductsComponent } from './components/product/product.component';
 import { FlashDealsComponent } from './components/flash-deals/flash-deals.component';
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 import { TrainingCourseComponent } from './components/training-course/training-course.component';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TrainingCourseComponent } from './components/training-course/training-c
     ProductsComponent,
     FlashDealsComponent,
     BestSellersComponent,
-    TrainingCourseComponent
+    TrainingCourseComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
