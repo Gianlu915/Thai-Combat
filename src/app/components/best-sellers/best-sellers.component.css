@@ -6,23 +6,28 @@ h3{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.main-best-seller {
+  position: relative; /* Necessario per posizionare i dots */
+  overflow-x: hidden; /* Nascondi solo l'overflow orizzontale */
+}
+
 .slick-slider {
   justify-content: space-between;
   align-items: center;
 }
 
 .product {
-  max-width: 300px; /* Limita la larghezza delle card */
-  text-align: center; /* Centra il contenuto */
-  margin: 0 auto; /* Centra ogni card */
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .slick-slider .product-img {
-  width: 100%; /* Imposta la larghezza al 100% del contenitore */
-  max-width: 300px; /* Imposta una larghezza massima se necessario */
-  height: auto; /* Mantiene il rapporto di aspetto originale */
-  object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
-  border-radius: 8px; /* Arrotonda i bordi per un effetto visivo migliore */
+  width: 100%;
+  max-width: 300px;
+  height: auto; 
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .product{

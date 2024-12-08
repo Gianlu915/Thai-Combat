@@ -19,7 +19,7 @@ export class BestSellersComponent implements OnInit {
     infinite: true,
     arrows: true,
     dots: true,
-    centerMode: false, // Disabilita la modalità centrata per evitare spazi extra
+    centerMode: false,
     variableWidth: false, 
     responsive: [
       {
