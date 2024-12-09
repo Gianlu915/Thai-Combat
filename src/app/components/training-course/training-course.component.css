@@ -27,15 +27,22 @@ p{
     justify-content: space-between;
 }
 
-video {
+.video-yokkao{
     width: 100%;
-    height: 100%;
+    height: auto;
+    flex-grow: 1;
 }
 
 .sub{
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .subscription{
@@ -87,3 +94,14 @@ button:hover span {
     color: black;
 }
 
+@media(max-width:650px){
+    .course-options {
+        flex-direction: column;
+    }
+
+    .thai-course{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

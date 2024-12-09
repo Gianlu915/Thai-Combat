@@ -33,3 +33,12 @@ a{
     color: rgb(27, 26, 26);
     font-weight: 200;
 }
+
+
+@media (max-width: 770px) {
+    .main-news {
+       flex-direction: column;
+    }
+
+    
+}
