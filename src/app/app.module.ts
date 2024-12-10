@@ -17,6 +17,7 @@ import { FlashDealsComponent } from './components/flash-deals/flash-deals.compon
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 import { TrainingCourseComponent } from './components/training-course/training-course.component';
 import { NewsComponent } from './components/news/news.component';
+import { TrustUsComponent } from './components/trust-us/trust-us.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NewsComponent } from './components/news/news.component';
     FlashDealsComponent,
     BestSellersComponent,
     TrainingCourseComponent,
-    NewsComponent
+    NewsComponent,
+    TrustUsComponent
   ],
   imports: [
     BrowserModule,
