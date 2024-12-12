@@ -12,12 +12,15 @@ import { MainBannerComponent } from './components/main-banner/main-banner.compon
 import { MainSliderComponent } from './components/main-slider/main-slider.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import {MatCardModule} from '@angular/material/card';
-import { ProductsComponent } from './components/product/product.component';
+import { ProductsComponent } from './pages/products/products.component';
 import { FlashDealsComponent } from './components/flash-deals/flash-deals.component';
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 import { TrainingCourseComponent } from './components/training-course/training-course.component';
 import { NewsComponent } from './components/news/news.component';
 import { TrustUsComponent } from './components/trust-us/trust-us.component';
+import { ProductComponent } from './components/product/product.component';
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { TrustUsComponent } from './components/trust-us/trust-us.component';
     BestSellersComponent,
     TrainingCourseComponent,
     NewsComponent,
-    TrustUsComponent
+    TrustUsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

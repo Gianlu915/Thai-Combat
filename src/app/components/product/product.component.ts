@@ -1,12 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Product } from '../../models/products.model';
 
 @Component({
-  selector: 'app-products',
+  selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class ProductsComponent{
+export class ProductComponent{
   
   @Input() product!: Product;
   
