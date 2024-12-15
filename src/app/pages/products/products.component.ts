@@ -25,6 +25,9 @@ export class ProductsComponent implements OnInit {
       this.category = params.get('categoryName') ?? '';
       this.brand = params.get('brandName') ?? ''; 
 
+      console.log("categoria",this.category)
+      console.log("brand", this.brand)
+
       this.loadProducts();
    
     });

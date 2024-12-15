@@ -24,7 +24,7 @@ export class ProductsService {
     } else if (brand) {
       return this.filterProductsByBrand(brand);
     } else {
-      return this.getAllProducts(); // Carica tutti i prodotti se nessun filtro è presente
+      return this.getAllProducts();
     }
   }
 
@@ -47,7 +47,7 @@ export class ProductsService {
     }
 
     filterProductsByCategoryAndBrand(category: string, brand: string): Observable<Product[]> {
-      return this.http.get<Product[]>(`${this.apiUrl}/api/products?category=${category}&brand=${brand}`);
+      return this.http.get<Product[]>(`${this.apiUrl}/api/products/category/${category}/brand/${brand}`);
     }
     
     

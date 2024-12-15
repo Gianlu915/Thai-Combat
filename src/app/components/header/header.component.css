@@ -31,6 +31,7 @@
 
 li {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .navbar-brand img{

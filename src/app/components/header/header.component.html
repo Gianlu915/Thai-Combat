@@ -15,26 +15,26 @@
           <a class="nav-link" [routerLink]="['/']" aria-current="page">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/new-in']">New in</a>
+          <a class="nav-link">New in</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" [routerLink]="['/products/category/gloves']">Gloves</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" [routerLink]="['/products/category/gloves/brand/yokkao']">Yokkao</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/products/gloves/leone']">Leone</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/products/gloves/fairtex']">Fairtex</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/products/category/gloves/brand/leone']">Leone</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/products/category/gloves/brand/fairtex']">Fairtex</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" [routerLink]="['/products/category/shorts']" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shorts</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" [routerLink]="['/products/shorts/yokkao']">Yokkao</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/products/shorts/leone']">Leone</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/products/shorts/fairtex']">Fairtex</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/products/category/shorts/brand/yokkao']">Yokkao</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/products/category/shorts/brand/leone']">Leone</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/products/category/shorts/brand/fairtex']">Fairtex</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" [routerLink]="['/sports']" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Sports
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -44,7 +44,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/deals']">Deals</a>
+          <a class="nav-link">Deals</a>
         </li>
       </ul>
 
