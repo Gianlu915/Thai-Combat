@@ -5,8 +5,10 @@ import { ProductsComponent } from './pages/products/products.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'products/:category', component: ProductsComponent },
-  { path: 'products/:category/:brand', component: ProductsComponent },
+  { path: 'products/category/:categoryName/brand/:brandName', component: ProductsComponent },
+  { path: 'products/category/:categoryName', component: ProductsComponent },
+  { path: 'products/brand/:brandName', component: ProductsComponent },
+
   { path: '**', redirectTo: '' },
 ];
 

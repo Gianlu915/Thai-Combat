@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/products.model';
@@ -6,41 +6,50 @@ import { Product } from '../../models/products.model';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
-
-  constructor(private route: ActivatedRoute, private productsService: ProductsService){}
+export class ProductsComponent implements OnInit {
 
   category: string = '';
+  brand: string = '';
   products: Product[] = [];
 
+  constructor(
+    private route: ActivatedRoute,
+    private productsService: ProductsService
+  ) {}
+
   ngOnInit(): void {
-    // Ottieni il parametro 'category' dalla rotta
     this.route.paramMap.subscribe(params => {
-      // Assegna il parametro 'category' (se esiste) alla variabile 'category'
-      this.category = params.get('category') ?? ''; // Se non esiste, assegna una stringa vuota
-  
-      // Ora carica i prodotti in base alla categoria (se presente)
+      // Recupera i parametri dalla rotta
+      this.category = params.get('categoryName') ?? '';
+      this.brand = params.get('brandName') ?? ''; 
+
       this.loadProducts();
+   
     });
-  }
-
-
-  loadProducts():void{
-    this.productsService.getAllProducts().subscribe(
-      res => {
-        if(this.category){
-          this.products = res.filter(product => product.category === this.category);
-        }else{
-          this.products = res;
-        }
-      },
-      err => {
-        console.log("errore caricamento dati", err)
-      }
-    )
-  }
-
-
 }
+
+loadProducts():void{
+
+  if (!this.productsService.isValidCategory(this.category) && !this.productsService.isValidBrand(this.brand)) {
+    console.log('Categoria o brand non validi');
+      this.products = [];
+    return;
+  }
+
+  this.productsService.getFilteredProducts(this.category,this.brand).subscribe(
+
+    res => {
+    this.products = res;
+    },
+    err => {
+      console.log('errore caricamento dati', err)
+    }
+
+  )};
+
+  
+      
+  
+  }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagesService } from '../../services/images.service';
+import { ProductsService } from '../../services/products.service';
+import { Product } from '../../models/products.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-banner',
@@ -9,18 +12,21 @@ import { ImagesService } from '../../services/images.service';
 export class MainBannerComponent implements OnInit {
 
   bannerItems: { image: string, buttonName: string }[] = [];
-  bannerButtons: string[] = ['Fairtex', 'Leone', 'Yokkao'];
+  bannerButtons: string[] = ['fairtex', 'leone', 'yokkao'];
+ 
 
-  constructor(private imagesService: ImagesService) {}
+  constructor(
+    private imagesService: ImagesService, 
+    private productsService: ProductsService, 
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.imagesService.getBannerImages().subscribe({
       next: (res) => {
-        console.log('Immagini ricevute:', res);
-        // Associa ogni immagine al nome del bottone e ottieni l'URL completo per l'immagine
         this.bannerItems = res.map((image, index) => ({
-          image: this.imagesService.getFullImageUrl(image), // Ottieni l'URL completo
-          buttonName: this.bannerButtons[index] || 'Default'  // Assegna un nome di bottone di default se non ci sono abbastanza bottoni
+          image: this.imagesService.getFullImageUrl(image),
+          buttonName: this.bannerButtons[index] || 'Default' 
         }));
       },
       error: (err) => {
@@ -28,4 +34,7 @@ export class MainBannerComponent implements OnInit {
       }
     });
   }
+
 }
+
+
