@@ -39,7 +39,7 @@ export class ProductsService {
 
 
     filterProductsByCategory(category: string): Observable<Product[]> {
-      return this.http.get<Product[]>(`${this.apiUrl}/api/products/category${category}`);
+      return this.http.get<Product[]>(`${this.apiUrl}/api/products/category/${category}`);
     }
 
     filterProductsByBrand(brand: string): Observable<Product[]> {
