@@ -1,0 +1,47 @@
+.main-filter{
+align-items: center;
+justify-content: center;
+border: 1px solid black;
+margin-top: 40px;
+}
+
+.main-filter > div{
+    border-right: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+.main-filter > div:last-child{
+    border-right: none;
+}
+
+.icons{
+width: 10%;
+}
+
+.icons img{
+width: 20px;
+margin-right: 9px;
+}
+
+.our-products{
+    width: 80%;
+}
+
+.our-products span{
+    margin-left: 100px;
+}
+
+.filter{
+    width: 10%;
+}
+
+.sort{
+    width: 10%;
+}
+
+.icons, .filter, .sort{
+    cursor: pointer;
+}
+
+

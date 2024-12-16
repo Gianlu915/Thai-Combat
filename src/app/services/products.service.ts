@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Product } from '../models/products.model';
 
 @Injectable({
@@ -58,6 +58,12 @@ export class ProductsService {
  
   isValidBrand(brand: string): boolean {
     return this.brands.includes(brand);
+  }
+
+  getProductCount(category: string, brand:string){
+    return this.getFilteredProducts(category, brand).pipe(
+      map(products => products.length)
+    )
   }
 
 }

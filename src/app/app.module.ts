@@ -19,6 +19,7 @@ import { TrainingCourseComponent } from './components/training-course/training-c
 import { NewsComponent } from './components/news/news.component';
 import { TrustUsComponent } from './components/trust-us/trust-us.component';
 import { ProductComponent } from './components/product/product.component';
+import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 
 
 
@@ -36,7 +37,8 @@ import { ProductComponent } from './components/product/product.component';
     TrainingCourseComponent,
     NewsComponent,
     TrustUsComponent,
-    ProductComponent
+    ProductComponent,
+    FilterBarComponent
   ],
   imports: [
     BrowserModule,
