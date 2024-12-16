@@ -1,5 +1,30 @@
+.desc a{
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.desc a:hover{
+  color:darkblue;
+}
+
+.desc{
+  margin-top: 140px;
+}
+
+h5{
+font-weight: 500;
+font-size: x-large;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+letter-spacing: 6px;
+}
+
+p{
+  font-weight: 200;
+}
+
 main{
-margin-top: 100px;
+  margin-top: 100px;
 }
 
 .grid-container {
