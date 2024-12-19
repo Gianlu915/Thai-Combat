@@ -20,6 +20,7 @@ import { NewsComponent } from './components/news/news.component';
 import { TrustUsComponent } from './components/trust-us/trust-us.component';
 import { ProductComponent } from './components/product/product.component';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -45,7 +46,8 @@ import { FilterBarComponent } from './components/filter-bar/filter-bar.component
     AppRoutingModule,
     HttpClientModule,
     SlickCarouselModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [
   ],

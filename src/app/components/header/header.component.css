@@ -2,13 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(180deg, #fbc2eb, #a6c1ee);
+  background: linear-gradient(90deg, #a8f9c7, #fdbb6d);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 }
+
+
+
+h3{
+  font-size: 30px;
+  color: rgb(16, 18, 20);
+  font-family: "Londrina Outline", serif;
+  margin-top: 3px;
+ }
+
+ img{
+  height: 34px;
+ }
+
 
 /* Dropdown Menu */
 .nav-item.dropdown:hover .dropdown-menu {

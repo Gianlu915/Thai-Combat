@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Product } from '../models/products.model';
 
 @Injectable({
@@ -65,5 +65,24 @@ export class ProductsService {
       map(products => products.length)
     )
   }
+
+  private priceFiltersSubject = new BehaviorSubject({
+    under50: false,
+    '50to100': false,
+    over100: false
+  });
+
+  get priceFilters$() {
+    return this.priceFiltersSubject.asObservable();
+  }
+
+  // Setter per aggiornare i filtri
+  setPriceFilters(filters: any) {
+    this.priceFiltersSubject.next(filters);
+  }
+
+
+
+
 
 }

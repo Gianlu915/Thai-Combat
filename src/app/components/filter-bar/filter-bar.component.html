@@ -8,8 +8,12 @@
         <span>{{totalProducts}} Products</span>
     </div>
 
-    <div class="filter">
+    <div class="filter" (click)="toggleDropDown()">
         <span>FILTER</span>
+        <span class="arrow" [ngClass]="{'rotate': isRotated}">&#8593;</span>
+
+        <!-- Filtro per Prezzo -->
+      
     </div>
 
     <div class="sort">
@@ -17,4 +21,26 @@
     </div>
 
 
+</div>
+
+<div *ngIf="isDropDownOpen" class="show-options">
+    <ul>
+        <li>
+            <span (click)="togglePrices()">Price<span class="arrow" [ngClass]="{'rotate': showPrices}">&#8593;</span></span>
+            <ul *ngIf="showPrices" class="show-filters show-prices">
+                <li><input type="checkbox" id="under50" [(ngModel)]="priceFilters['under50']" (ngModelChange)="onFilterChange()"><label for="under50">Under 50$</label></li>
+                <li><input type="checkbox" id="50to100" [(ngModel)]="priceFilters['50to100']" (ngModelChange)="onFilterChange()"><label for="50to100">50$ - 100$</label></li>
+                <li><input type="checkbox" id="over100" [(ngModel)]="priceFilters['over100']" (ngModelChange)="onFilterChange()"><label for="over100">Over 100$</label></li>
+            </ul>
+        </li>
+        <li>
+            <span (click)="toggleSizes()">Size<span class="arrow" [ngClass]="{'rotate': showSizes}">&#8593;</span></span>
+            <ul *ngIf="showSizes" class="show-filters show-sizes">
+                <li><input type="checkbox" id="s"><label for="s">S</label></li>
+                <li><input type="checkbox" id="m"><label for="m">M</label></li>
+                <li><input type="checkbox" id="l"><label for="l">L</label></li>
+            </ul>
+        </li>
+        <li>Best seller</li>
+    </ul>
 </div>
