@@ -33,3 +33,10 @@ main{
     gap: 20px;
     justify-items: center;
   }
+
+  .no-products-message {
+    text-align: center;
+    color: #ff0000; 
+    font-size: 1.2rem;
+    padding: 20px;
+  }

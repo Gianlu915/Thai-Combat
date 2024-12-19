@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   brand: string = '';
   products: Product[] = [];
   priceFilters: any = {}; // Stato per i filtri dei prezzi
+  noProductsFound: boolean = false;
   private filterSubscription: Subscription = new Subscription();
 
   constructor(
@@ -85,6 +86,7 @@ loadProducts():void{
     } else {
       // Se ci sono filtri selezionati, aggiorna i prodotti filtrati
       this.products = filtered;
+      this.noProductsFound = filtered.length === 0;
     }
   }
 }

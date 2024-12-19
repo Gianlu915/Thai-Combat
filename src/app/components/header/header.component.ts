@@ -13,6 +13,7 @@ export class HeaderComponent {
 
   isSearchVisible = false;
   isShadowActive = false;
+  isNavbarCollapsed = false;
 
   toogleSearch() {
     this.isSearchVisible = !this.isSearchVisible;
@@ -21,4 +22,10 @@ export class HeaderComponent {
       this.searchInput.nativeElement.value = '';
     }
   }
+
+  closeNav():void{
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+    
+  }
+
 }

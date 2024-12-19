@@ -42,6 +42,10 @@
 
 <app-filter-bar></app-filter-bar>
 
+<div *ngIf="noProductsFound" class="no-products-message">
+  <p>Nessun prodotto trovato con i filtri applicati.</p>
+</div>
+
 <main class="container">
   <div class="grid-container">
     <div *ngFor="let product of products">
