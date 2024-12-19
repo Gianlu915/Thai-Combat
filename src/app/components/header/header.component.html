@@ -47,28 +47,28 @@
           <a class="nav-link" (click)="closeNav()">Deals</a>
         </li>
       </ul>
+    </div>
 
-      <!-- Desktop Icons (Hidden on mobile) -->
-      <div class="nav-icons gap-4 d-md-flex d-none">
-        <a (click)="toogleSearch()"><img src="assets/icons/search-interface-symbol.png" alt="Search"></a>
+    <!-- Desktop Icons (Hidden on mobile) -->
+    <div class="nav-icons gap-4 d-md-flex d-none">
+      <a (click)="toogleSearch()"><img src="assets/icons/search-interface-symbol.png" alt="Search"></a>
+      <span class="cart-items">0</span>
+      <a href="#"><img src="assets/icons/market.png" alt="Cart"></a>
+      <a href="#"><img src="assets/icons/user.png" alt="Sign or Register"></a>
+    </div>
+
+    <!-- Mobile Menu Icons, Inside Burger Menu -->
+    <div class="nav-icons-mobile d-md-none d-flex gap-3">
+      <a (click)="toogleSearch()" class="search-icon">
+        <img src="assets/icons/search-interface-symbol.png" alt="Search">
+      </a>
+      <a href="#" class="cart-icon">
+        <img src="assets/icons/market.png" alt="Cart">
         <span class="cart-items">0</span>
-        <a href="#"><img src="assets/icons/market.png" alt="Cart"></a>
-        <a href="#"><img src="assets/icons/user.png" alt="Sign or Register"></a>
-      </div>
-
-      <!-- Mobile Menu Icons, Inside Burger Menu -->
-      <div class="nav-icons-mobile d-md-none d-flex gap-3">
-        <a (click)="toogleSearch()" class="search-icon">
-          <img src="assets/icons/search-interface-symbol.png" alt="Search">
-        </a>
-        <a href="#" class="cart-icon">
-          <img src="assets/icons/market.png" alt="Cart">
-          <span class="cart-items">0</span>
-        </a>
-        <a href="#" class="user-icon">
-          <img src="assets/icons/user.png" alt="Sign or Register">
-        </a>
-      </div>
+      </a>
+      <a href="#" class="user-icon">
+        <img src="assets/icons/user.png" alt="Sign or Register">
+      </a>
     </div>
   </div>
 </nav>

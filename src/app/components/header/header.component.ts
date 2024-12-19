@@ -13,7 +13,7 @@ export class HeaderComponent {
 
   isSearchVisible = false;
   isShadowActive = false;
-  isNavbarCollapsed = false;
+  isNavbarCollapsed = true;
 
   toogleSearch() {
     this.isSearchVisible = !this.isSearchVisible;
