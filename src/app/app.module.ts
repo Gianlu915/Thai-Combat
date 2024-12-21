@@ -21,6 +21,7 @@ import { TrustUsComponent } from './components/trust-us/trust-us.component';
 import { ProductComponent } from './components/product/product.component';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 import { FormsModule } from '@angular/forms';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 
@@ -39,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     NewsComponent,
     TrustUsComponent,
     ProductComponent,
-    FilterBarComponent
+    FilterBarComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

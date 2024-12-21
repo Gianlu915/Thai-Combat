@@ -2,7 +2,7 @@
 
 <div class="main-best-seller">
 <ngx-slick-carousel class="mb-5 slick-slider" [config]="slideConfig" #slickModal="slick-carousel">
-  <div ngxSlickItem *ngFor="let product of bestSellerProducts" class="carousel">
+  <div ngxSlickItem *ngFor="let product of bestSellerProducts" class="carousel" [routerLink]="['/products', product.name,product.id]">
     <div class="product">
       <img [src]="'http://localhost:3000/uploads/products/' + product.category + '/' + product.brand + '/' + product.image_url" 
            class="product-img" alt="Product Image">
