@@ -1,7 +1,65 @@
-<p>cart works!</p>
+<div class="cart-container container">
+    <div class="cart-item gap-4">
+      <div class="cart-item-image">
+        <img [src]="'http://localhost:3000/uploads/products/' + product.category + '/' + product.brand + '/' + product.image_url" alt="Product Image">
+      </div>
+  
+      <div class="cart-item-details">
+        <div class="cart-item-desc">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>{{ product.price | currency }}</strong></p>
+      </div>
 
+      <div class="brand">
+        <ul>
+          <li>Innovative iridescent fabric</li>
+          <li>Dynamic color-shifting effect</li>
+          <li>Adaptable waistband</li>
+          <li>Adaptable waistband</li>
+          <li>Embroidered YOKKAO Patch</li>
+        </ul>
+      </div>
 
-<div style="width: 400px;">
-    ciao
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis sunt magnam earum, doloremque rerum repudiandae consequatur in laborum. Exercitationem minima minus culpa tempora iusto, dolore eveniet molestias error harum?
-</div>
+      <div class="size">
+        <div class="my-size">
+          <img src="/assets/icons/ecran-dechelle.png" alt="Icona di una scala per scegliere la taglia">
+          <span>What is my size?</span>
+        </div>
+        
+        <div class="sizes">
+          <span>Size:</span>
+          <div class="all" [(ngModel)]="size" (click)="selectSize()">
+            <button class="size-option">S</button>
+            <button class="size-option">M</button>
+            <button class="size-option">L</button>
+            <button class="size-option">XL</button>
+            <button class="size-option">XXL</button>
+          </div>
+        </div>
+      </div>
+      
+  
+      <div class="quantity-controls">
+        <button (click)="decrease()">-</button>
+        <input [(ngModel)]="quantity" min="1" id="quantity" />
+        <button (click)="increase()">+</button>
+      </div>
+
+        <div class="cart-summary gap-2">
+          <button class="add-button" (click)="addItem()"><span>ADD TO CART</span></button>
+          <button class="pay-pal">Pay with <span class="pay">Pay</span><span class="pal">Pal</span></button>
+          <button class="more-payments">More payments options</button>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <app-key-features></app-key-features>
+  
+  </div>
+
+<hr>
+<app-trust-us></app-trust-us>
+  

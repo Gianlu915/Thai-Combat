@@ -82,6 +82,9 @@ export class ProductsService {
   }
 
 
+  filterProductsById(id: number):Observable <Product> {
+    return this.http.get<Product>(`${this.apiUrl}/api/products/${id}`);
+  }
 
 
 

@@ -22,6 +22,8 @@ import { ProductComponent } from './components/product/product.component';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { KeyFeaturesComponent } from './components/key-features/key-features.component';
 
 
 
@@ -41,7 +43,9 @@ import { CartComponent } from './pages/cart/cart.component';
     TrustUsComponent,
     ProductComponent,
     FilterBarComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent,
+    KeyFeaturesComponent
   ],
   imports: [
     BrowserModule,
