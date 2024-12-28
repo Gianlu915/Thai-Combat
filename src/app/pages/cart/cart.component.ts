@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; // per ottenere l'id dalla route
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/products.model';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -13,13 +14,14 @@ export class CartComponent implements OnInit {
   product!: Product;
   errorMessage: string = '';
   quantity: number = 1;
-  size: boolean = false;
-  addToCart: boolean = false;
+  size: string = '';
+  showError: boolean = false;
+  showMessage: boolean = false;
 
 
   constructor(
     private productsService: ProductsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute, private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -36,7 +38,6 @@ export class CartComponent implements OnInit {
     this.productsService.filterProductsById(id).subscribe(
       (res) => {
         this.product = res;
-        console.log("prodotto:",this.product)
       },
       (error) => {
         this.errorMessage = 'Errore nel recupero del prodotto. Riprova più tardi.';
@@ -57,12 +58,18 @@ export class CartComponent implements OnInit {
   }
 
   selectSize(){
-    this.size = !this.size;
+    this.showError = false;
+    this.showMessage = false;
   }
 
-  addItem(){
+  addToCart() {
     if(this.size){
-      console.log('guanti aggiunti al carrello')
+       // Quando l'utente clicca su "Aggiungi al carrello", aggiorniamo il numero degli articoli nel carrello
+      this.cartService.addItemToCart(this.quantity);
+      this.showError = false;
+      this.showMessage = true;
+    }else{
+      this.showError = true;
     }
   }
 }

@@ -29,15 +29,34 @@
         
         <div class="sizes">
           <span>Size:</span>
-          <div class="all" [(ngModel)]="size" (click)="selectSize()">
-            <button class="size-option">S</button>
-            <button class="size-option">M</button>
-            <button class="size-option">L</button>
-            <button class="size-option">XL</button>
-            <button class="size-option">XXL</button>
+          <div class="all">
+            <input type="radio" [(ngModel)]="size" value="S" (change)="selectSize()" id="sizeS" name="size" class="size-option">
+            <label for="sizeS">S</label>
+        
+            <input type="radio" [(ngModel)]="size" value="M" (change)="selectSize()" id="sizeM" name="size" class="size-option">
+            <label for="sizeM">M</label>
+        
+            <input type="radio" [(ngModel)]="size" value="L" (change)="selectSize()" id="sizeL" name="size" class="size-option">
+            <label for="sizeL">L</label>
+        
+            <input type="radio" [(ngModel)]="size" value="XL" (change)="selectSize()" id="sizeXL" name="size" class="size-option">
+            <label for="sizeXL">XL</label>
+        
+            <input type="radio" [(ngModel)]="size" value="XXL" (change)="selectSize()" id="sizeXXL" name="size" class="size-option">
+            <label for="sizeXXL">XXL</label>
+          </div>
+          <div *ngIf="showError">
+            <span [ngClass]="{'error-message': showError}">Taglia non selezionata</span>
+          </div>
+          <div *ngIf="showMessage">
+            <span [ngClass]="{'add-message': showMessage}">Prodotto aggiunto al carrello</span>
           </div>
         </div>
+        
+        
       </div>
+
+     
       
   
       <div class="quantity-controls">
@@ -47,7 +66,7 @@
       </div>
 
         <div class="cart-summary gap-2">
-          <button class="add-button" (click)="addItem()"><span>ADD TO CART</span></button>
+          <button class="add-button" (click)="addToCart()"><span>ADD TO CART</span></button>
           <button class="pay-pal">Pay with <span class="pay">Pay</span><span class="pal">Pal</span></button>
           <button class="more-payments">More payments options</button>
         </div>

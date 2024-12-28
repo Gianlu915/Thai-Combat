@@ -186,6 +186,14 @@ font-size: large;
   text-decoration: underline;
 }
 
+.add-message{
+  color: green;
+}
+
+.error-message{
+  color: red;
+}
+
 @media(max-width:1000px){
   .cart-item{
     display: flex;
