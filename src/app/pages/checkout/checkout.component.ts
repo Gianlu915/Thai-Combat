@@ -45,11 +45,15 @@ export class CheckoutComponent {
 
   products: Product[] = [];
   size: string = '';
+  subtotal: number = 0;
+  shipping: string = "10$";
+  total: number = 0;
 
   ngOnInit(): void {
     // Recupera i prodotti dal carrello all'inizio
     this.products = this.cartService.getCart();
-
+    this.calculateSubTotal();
+    this.calculateTotal();
   }
 
   creditCard() {
@@ -71,6 +75,23 @@ export class CheckoutComponent {
     }
   }
 
-  
+  getTotalForProduct(product: Product): number {
+    return this.cartService.getTotalPriceForProduct(product);
+  }
 
+  calculateSubTotal(): void {
+    this.subtotal = this.products.reduce((sum, product) => {
+      return sum + this.getTotalForProduct(product);
+    }, 0);
+  }
+
+  calculateTotal(){
+  if(this.subtotal > 1 && this.subtotal< 100){
+     this.total = this.subtotal + 10;
+  }else if (this.subtotal > 100){
+    this.total = this.subtotal;
+    this.shipping = "Free";
+  }
+  }
 }
+

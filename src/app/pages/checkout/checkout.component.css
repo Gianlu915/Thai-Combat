@@ -1,5 +1,29 @@
+.scrolling-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.free-delivery {
+  padding: 0 30px; 
+  animation: scroll 10s linear infinite;
+  margin-top: 80px;
+  font-weight: 200;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .checkout-main{
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .contacts{
@@ -16,6 +40,10 @@
   background-color:rgba(247, 246, 246, 0.969);
 }
 
+.product{
+  margin-bottom: 10px;
+}
+
 
 .products img{
   width: 70px;
@@ -27,7 +55,6 @@
   align-items: center;
   width: 100%;
   gap: 20px;
-  border: 1px solid rgb(246, 255, 0);
   margin-left: 5px;
 }
 
@@ -35,7 +62,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1px solid rgb(0, 132, 255);
 }
 
 .product-info p,
@@ -348,6 +374,12 @@
 .discount button:hover{
   background-color: black;
   color: white;
+}
+
+.sub{
+  width: 100%;
+  margin-top: 10px;
+
 }
 
 

@@ -1,3 +1,18 @@
+<div class="scrolling-container">
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  
+</div>
+
 <div class="checkout-main d-flex container">
   <div class="contacts container">
     <p>Express checkout</p>
@@ -349,9 +364,11 @@
           <span>{{ product.size }}</span> 
         </div>
         <div class="product-price">
-      <p>{{ product.price | currency }}</p>
+      <p>{{ getTotalForProduct(product) | currency }}</p>
         </div>
       </div>
+
+      
     </div>
 
     <div class="discount d-flex gap-1">
@@ -362,6 +379,21 @@
         placeholder="Discount code or gift card"
       />
       <button type="button">Apply</button>
+    </div>
+
+    <div class="sub d-flex gap-1 justify-content-between">
+      <p>Subtotal:</p>
+      <p>{{subtotal | currency}}</p>
+    </div>
+
+    <div class="shipping d-flex gap-1 justify-content-between">
+      <p>Shipping</p>
+      <p>{{shipping}}</p>
+    </div>
+
+    <div class="total d-flex gap-1 justify-content-between">
+      <h5><strong>Total</strong></h5>
+      <p>{{total | currency}}</p>
     </div>
   </div>
 

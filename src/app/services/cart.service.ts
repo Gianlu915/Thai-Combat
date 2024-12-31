@@ -23,9 +23,9 @@ export class CartService {
     if (existingProduct) {
       // Se il prodotto esiste già, incrementa la sua quantità
       existingProduct.quantity += quantity;
+      
     } else {
-      // Se il prodotto non esiste, aggiungilo con la quantità
-      const newProduct = { ...product, quantity, size };
+      const newProduct = { ...product, quantity, size, totalPrice: product.price * quantity };
       this.cart.push(newProduct);
     }
 
@@ -46,4 +46,10 @@ export class CartService {
       this.cartItemCount.next(this.cartItemCount.value - 1);
     }
   }
+
+  getTotalPriceForProduct(product: Product): number {
+    return product.quantity * product.price;
+  }
+
+  
 }

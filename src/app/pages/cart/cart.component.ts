@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
   product!: Product;
   errorMessage: string = '';
   quantity: number = 1;
+  price: number = 0;
   size: string = '';
   showError: boolean = false;
   showMessage: boolean = false;
@@ -66,11 +67,14 @@ export class CartComponent implements OnInit {
     if(this.size){
        // Quando l'utente clicca su "Aggiungi al carrello", aggiorniamo il numero degli articoli nel carrello
       this.cartService.addItemToCart(this.product, this.quantity, this.size);
-      this.product.quantity++;
       this.showError = false;
       this.showMessage = true;
     }else{
       this.showError = true;
     }
   }
+
+  
+
+  
 }
