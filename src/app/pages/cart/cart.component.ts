@@ -65,7 +65,8 @@ export class CartComponent implements OnInit {
   addToCart() {
     if(this.size){
        // Quando l'utente clicca su "Aggiungi al carrello", aggiorniamo il numero degli articoli nel carrello
-      this.cartService.addItemToCart(this.quantity);
+      this.cartService.addItemToCart(this.product, this.quantity, this.size);
+      this.product.quantity++;
       this.showError = false;
       this.showMessage = true;
     }else{

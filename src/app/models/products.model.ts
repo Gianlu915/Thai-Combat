@@ -7,4 +7,6 @@ export interface Product {
     category: string;
     best_seller: number;
     brand: string;
+    size: string;
+    quantity: number;
 }
