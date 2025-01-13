@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { KeyFeaturesComponent } from './components/key-features/key-features.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 
 
 
@@ -45,7 +46,8 @@ import { KeyFeaturesComponent } from './components/key-features/key-features.com
     FilterBarComponent,
     CartComponent,
     CheckoutComponent,
-    KeyFeaturesComponent
+    KeyFeaturesComponent,
+    ThankYouComponent
   ],
   imports: [
     BrowserModule,

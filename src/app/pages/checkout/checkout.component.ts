@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CartService } from '../../services/cart.service';
 import { Product } from '../../models/products.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -10,7 +11,7 @@ import { Product } from '../../models/products.model';
 })
 export class CheckoutComponent {
 
-  constructor(private cartService: CartService){}
+  constructor(private cartService: CartService,private router: Router){}
 
   emailRegex: string = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
   phoneRegex: string = "^[0-9]{10}$";
@@ -68,7 +69,7 @@ export class CheckoutComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      console.log('Form submitted successfully');
+      this.router.navigate(['/thank-you']);
       form.reset();
     } else {
       console.log('Form is not valid');

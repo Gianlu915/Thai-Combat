@@ -4,6 +4,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -12,9 +13,7 @@ const routes: Routes = [
   { path: 'products/brand/:brandName', component: ProductsComponent },
   { path: 'products/:productName/:id', component: CartComponent },
   { path: 'products/checkout', component: CheckoutComponent },
-
-
-  { path: '**', redirectTo: '' },
+  { path: 'thank-you', component: ThankYouComponent }
 ];
 
 @NgModule({
