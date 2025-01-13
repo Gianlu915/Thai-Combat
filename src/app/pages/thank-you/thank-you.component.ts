@@ -8,4 +8,23 @@ import { Component } from '@angular/core';
 export class ThankYouComponent {
 
   firstName: string = '';
+
+  orderNumber: number = 0;
+
+  ngOnInit() {
+    this.orderNumber = this.generateRandomNumber();
+  }
+
+  generateRandomNumber():number{
+     
+    let num = "";
+
+    for(let i=0; i<10; i++){
+      const ranNum = Math.floor(Math.random() * 10)
+
+      num += ranNum;
+    }
+
+    return Number(num)
+  }
 }
