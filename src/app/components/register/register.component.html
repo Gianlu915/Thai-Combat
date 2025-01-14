@@ -1,6 +1,6 @@
 <main>
 
-    <div class="log">
+    <div class="log" *ngIf="!isRegistered">
       <h2>Sign up</h2>
   
       <p>Please fill in the information below:</p>
@@ -58,6 +58,8 @@
         <p>Already have an account?&nbsp;<a [routerLink]="['/login']">Login</a></p>
       </form>
     </div>
+
+    <app-welcome *ngIf="isRegistered"></app-welcome>
   
   </main>
 

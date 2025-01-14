@@ -27,6 +27,7 @@ import { KeyFeaturesComponent } from './components/key-features/key-features.com
 import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 
@@ -51,7 +52,8 @@ import { RegisterComponent } from './components/register/register.component';
     KeyFeaturesComponent,
     ThankYouComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

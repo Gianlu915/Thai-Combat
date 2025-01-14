@@ -48,14 +48,18 @@
 
     <!-- Desktop Icons (Hidden on mobile) -->
     <div class="nav-icons gap-4 d-md-flex d-none">
+      <span class="user-name" *ngIf="userName">{{"Hi " + userName}} </span>
       <a (click)="toogleSearch()"><img src="assets/icons/search-interface-symbol.png" alt="Search"></a>
-      <span class="cart-items">{{cartItemCount}}</span>
+      <span [ngClass]="userName ? 'cart-items-span' : 'cart-items'">{{cartItemCount}}</span>
       <a href="#" [routerLink]="['/products/checkout']"><img src="assets/icons/market.png" alt="Cart"></a>
-      <a [routerLink]="['/login']"><img src="assets/icons/user.png" alt="Sign or Register"></a>
+
+      <a *ngIf="userName" [routerLink]="['/']"><img src="/assets/icons/logout.png" alt="logout" (click)="logout()"></a>
+      <a *ngIf="!userName" [routerLink]="['/login']"><img src="assets/icons/user.png" alt="Sign or Register"></a>
     </div>
 
     <!-- Mobile Menu Icons, Inside Burger Menu -->
     <div class="nav-icons-mobile d-md-none d-flex gap-3">
+      <span id="user-name">{{userName}}</span>
       <a (click)="toogleSearch()" class="search-icon">
         <img src="assets/icons/search-interface-symbol.png" alt="Search">
       </a>
