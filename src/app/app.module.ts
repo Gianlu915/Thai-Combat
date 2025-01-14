@@ -25,6 +25,8 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { KeyFeaturesComponent } from './components/key-features/key-features.component';
 import { ThankYouComponent } from './pages/thank-you/thank-you.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -47,7 +49,9 @@ import { ThankYouComponent } from './pages/thank-you/thank-you.component';
     CartComponent,
     CheckoutComponent,
     KeyFeaturesComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

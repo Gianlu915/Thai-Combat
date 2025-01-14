@@ -51,7 +51,7 @@
       <a (click)="toogleSearch()"><img src="assets/icons/search-interface-symbol.png" alt="Search"></a>
       <span class="cart-items">{{cartItemCount}}</span>
       <a href="#" [routerLink]="['/products/checkout']"><img src="assets/icons/market.png" alt="Cart"></a>
-      <a href="#"><img src="assets/icons/user.png" alt="Sign or Register"></a>
+      <a [routerLink]="['/login']"><img src="assets/icons/user.png" alt="Sign or Register"></a>
     </div>
 
     <!-- Mobile Menu Icons, Inside Burger Menu -->
@@ -63,7 +63,7 @@
         <img src="assets/icons/market.png" alt="Cart">
         <span class="cart-items">{{cartItemCount}}</span>
       </a>
-      <a href="#" class="user-icon">
+      <a [routerLink]="['/login']" class="user-icon">
         <img src="assets/icons/user.png" alt="Sign or Register">
       </a>
     </div>
