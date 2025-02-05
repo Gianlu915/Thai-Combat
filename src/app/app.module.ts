@@ -21,6 +21,15 @@ import { TrainingCourseComponent } from './components/training-course/training-c
 import { NewsComponent } from './components/news/news.component';
 import { TrustUsComponent } from './components/trust-us/trust-us.component';
 import { ProductComponent } from './components/product/product.component';
+import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
+import { FormsModule } from '@angular/forms';
+import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { KeyFeaturesComponent } from './components/key-features/key-features.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 >>>>>>> homepage
@@ -42,8 +51,20 @@ import { ProductComponent } from './components/product/product.component';
     TrainingCourseComponent,
     NewsComponent,
     TrustUsComponent,
+<<<<<<< HEAD
     ProductComponent
 >>>>>>> homepage
+=======
+    ProductComponent,
+    FilterBarComponent,
+    CartComponent,
+    CheckoutComponent,
+    KeyFeaturesComponent,
+    ThankYouComponent,
+    LoginComponent,
+    RegisterComponent,
+    WelcomeComponent
+>>>>>>> origin/checkout
   ],
   imports: [
     BrowserModule,
@@ -53,7 +74,8 @@ import { ProductComponent } from './components/product/product.component';
 =======
     HttpClientModule,
     SlickCarouselModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [
 >>>>>>> homepage

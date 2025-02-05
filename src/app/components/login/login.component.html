@@ -1,0 +1,47 @@
+<main>
+
+    <!-- Sezione di Login -->
+    <div class="log" *ngIf="!access">
+      <h2>Login</h2>
+  
+      <p>Enter your email and password to login:</p>
+      <form #loginForm="ngForm" (ngSubmit)="onSubmitLogin(loginForm)">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="E-mail"
+            required
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+  
+        <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  
+        <p>Don't have an account?&nbsp;<a [routerLink]="['/register']">Sign up</a></p>
+      </form>
+    </div>
+
+    <div *ngIf="access" class="welcome-back">
+      <h3>Welcome back, {{ userName }}! We're happy to see you again.</h3>
+    </div>
+  
+   
+  </main>
+
+  <app-trust-us></app-trust-us>
+  

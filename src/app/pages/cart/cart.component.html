@@ -1,0 +1,84 @@
+<div class="cart-container container">
+    <div class="cart-item gap-4">
+      <div class="cart-item-image">
+        <img [src]="'http://localhost:3000/uploads/products/' + product.category + '/' + product.brand + '/' + product.image_url" alt="Product Image">
+      </div>
+  
+      <div class="cart-item-details">
+        <div class="cart-item-desc">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>{{ product.price | currency }}</strong></p>
+      </div>
+
+      <div class="brand">
+        <ul>
+          <li>Innovative iridescent fabric</li>
+          <li>Dynamic color-shifting effect</li>
+          <li>Adaptable waistband</li>
+          <li>Adaptable waistband</li>
+          <li>Embroidered YOKKAO Patch</li>
+        </ul>
+      </div>
+
+      <div class="size">
+        <div class="my-size">
+          <img src="/assets/icons/ecran-dechelle.png" alt="Icona di una scala per scegliere la taglia">
+          <span>What is my size?</span>
+        </div>
+        
+        <div class="sizes">
+          <span>Size:</span>
+          <div class="all">
+            <input type="radio" [(ngModel)]="size" value="S" (change)="selectSize()" id="sizeS" name="size" class="size-option">
+            <label for="sizeS">S</label>
+        
+            <input type="radio" [(ngModel)]="size" value="M" (change)="selectSize()" id="sizeM" name="size" class="size-option">
+            <label for="sizeM">M</label>
+        
+            <input type="radio" [(ngModel)]="size" value="L" (change)="selectSize()" id="sizeL" name="size" class="size-option">
+            <label for="sizeL">L</label>
+        
+            <input type="radio" [(ngModel)]="size" value="XL" (change)="selectSize()" id="sizeXL" name="size" class="size-option">
+            <label for="sizeXL">XL</label>
+        
+            <input type="radio" [(ngModel)]="size" value="XXL" (change)="selectSize()" id="sizeXXL" name="size" class="size-option">
+            <label for="sizeXXL">XXL</label>
+          </div>
+          <div *ngIf="showError">
+            <span [ngClass]="{'error-message': showError}">Taglia non selezionata</span>
+          </div>
+          <div *ngIf="showMessage">
+            <span [ngClass]="{'add-message': showMessage}">Prodotto aggiunto al carrello</span>
+          </div>
+        </div>
+        
+        
+      </div>
+
+     
+      
+  
+      <div class="quantity-controls">
+        <button (click)="decrease()">-</button>
+        <input [(ngModel)]="quantity" min="1" id="quantity" />
+        <button (click)="increase()">+</button>
+      </div>
+
+        <div class="cart-summary gap-2">
+          <button class="add-button" (click)="addToCart()"><span>ADD TO CART</span></button>
+          <button class="pay-pal">Pay with <span class="pay">Pay</span><span class="pal">Pal</span></button>
+          <button class="more-payments">More payments options</button>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <app-key-features></app-key-features>
+  
+  </div>
+
+<hr>
+<app-trust-us></app-trust-us>
+  

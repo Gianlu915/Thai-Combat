@@ -1,0 +1,400 @@
+<div class="scrolling-container">
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+  <h5 class="free-delivery">Free delivery for orders more than 150$</h5>
+
+</div>
+
+<div class="checkout-main d-flex container">
+  <div class="contacts container">
+    <p>Express checkout</p>
+    <a href="https://www.paypal.com/signin" target="_blank">
+      <button class="pay-pal">
+        Pay with <span class="pay">Pay</span><span class="pal">Pal</span>
+      </button>
+    </a>
+
+    <p>OR</p>
+    <hr>
+
+    <div class="d-flex log">
+      <h4>Contact</h4>
+      <a href="">Log in</a>
+    </div>
+
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+      <!-- Email -->
+      <div>
+        <input 
+          type="text" 
+          id="email" 
+          name="email" 
+          placeholder="Email"
+          [(ngModel)]="email.value"
+          [pattern]="emailRegex"
+          required 
+          #email="ngModel" 
+          autocomplete="off" 
+          maxlength="40"
+          [ngClass]="{ 'invalid-input': email.touched && email.invalid }"
+        />
+        <div *ngIf="email.touched">
+          <small class="error" *ngIf="email.errors?.['required']">
+            Please enter email address
+          </small>
+          <small class="error" *ngIf="email.errors?.['pattern']">
+            Please enter a valid email address
+          </small>
+        </div>
+      
+      </div>
+
+      <!-- Newsletter -->
+      <div class="checkbox-container d-flex">
+        <input type="checkbox" id="newsletter" />
+        <label for="newsletter">Email me with news and offers</label>
+      </div>
+
+      <!-- Country -->
+      <h4>Delivery</h4>
+      <div>
+        <select id="country" name="country" [(ngModel)]="country">
+          <label for="country" class="label">Country/Region</label>
+          <option value="" selected>Italy</option>
+        </select>
+      </div>
+
+      <!-- Name -->
+      <div class="d-flex first-last">
+        <div class="input-container">
+          <input 
+            type="text" 
+            id="firstName" 
+            name="firstName" 
+            placeholder="First Name" 
+            [(ngModel)]="firstName.value" 
+            required 
+            #firstName="ngModel"
+            autocomplete="off"  
+            [ngClass]="{ 'invalid-input': firstName.touched && firstName.invalid }"
+          />
+          <div *ngIf="firstName.invalid && firstName.touched">
+            <small class="error">First name is required</small>
+          </div>
+        </div>
+        <div class="input-container">
+          <input 
+            type="text" 
+            id="lastName" 
+            name="lastName" 
+            placeholder="Last Name" 
+            [(ngModel)]="lastName.value" 
+            required 
+            #lastName="ngModel" 
+            autocomplete="off" 
+            [ngClass]="{ 'invalid-input': lastName.touched && lastName.invalid }"
+          />
+          <div *ngIf="lastName.invalid && lastName.touched">
+            <small class="error">Last name is required</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <input 
+          type="text" 
+          id="company" 
+          name="company" 
+          placeholder="Company (optional)" 
+          [(ngModel)]="company" 
+          autocomplete="off" 
+        />
+      </div>
+
+      <!-- Address -->
+      <div>
+        <input 
+          type="text" 
+          id="address" 
+          name="address" 
+          placeholder="Address" 
+          [(ngModel)]="address.value" 
+          autocomplete="off" 
+          required 
+          #address="ngModel" 
+          [ngClass]="{ 'invalid-input': address.touched && address.invalid }"
+        />
+        <div *ngIf="address.invalid && address.touched">
+          <small class="error">Address is required</small>
+        </div>
+      </div>
+
+      <!-- Apartment -->
+      <div>
+        <input 
+          type="text" 
+          id="apartment" 
+          name="apartment" 
+          placeholder="Apartment, suite, etc. (optional)" 
+          [(ngModel)]="apartment" 
+          autocomplete="off" 
+        />
+      </div>
+
+      <!-- City, Province, Postal Code -->
+      <div class="d-flex justify-content-between">
+        <div>
+          <input 
+            type="text" 
+            id="city" 
+            name="city" 
+            placeholder="City" 
+            [(ngModel)]="city"
+            #cityField="ngModel" 
+            autocomplete="off" 
+          />
+        </div>
+
+        <div>
+          <input 
+            type="text" 
+            id="province" 
+            name="province" 
+            placeholder="Province" 
+            [(ngModel)]="province" 
+            #provinceField="ngModel" 
+            autocomplete="off" 
+          />
+        </div>
+
+        <div>
+          <input 
+            type="text" 
+            id="postal-code" 
+            name="postalCode" 
+            placeholder="Postal code" 
+            [(ngModel)]="postalCode"
+
+            autocomplete="off" 
+          />
+        </div>
+      </div>
+
+      <!-- Telephone -->
+      <div class="telephone">
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          placeholder="Phone" 
+          [(ngModel)]="phone.value" 
+          [pattern]="phoneRegex"
+          required 
+          #phone="ngModel" 
+          autocomplete="off" 
+          maxlength="10"
+          [ngClass]="{ 'invalid-input': phone.touched && phone.invalid }"
+        />
+        <img src="/assets/icons/question-signe-en-cercles.png" alt="icon">
+        <div class="trigger">
+          <p>In case we need to <br> contact you about your <br> order</p>
+        </div>
+      </div>
+
+      <div *ngIf="phone.invalid && phone.touched">
+        <small class="error">Please enter Phone number</small>
+      </div>
+
+      <!-- Save info checkbox -->
+      <div class="save-info">
+        <input type="checkbox" id="info" name="info" />
+        <label for="info">Save this information for next time</label>
+      </div>
+
+      <!-- Payment -->
+      <div class="payment">
+        <h4>Payment</h4>
+        <p>All transactions are secure and encrypted.</p>
+      </div>
+
+      <!-- Credit Card -->
+      <div class="credit-card d-flex">
+        <div>
+          <input 
+            (click)="creditCard()" 
+            type="radio" 
+            id="credit" 
+            name="credit" 
+            [(ngModel)]="paymentMethod" 
+            value="creditCard" 
+            [checked]="creditIsSelected" 
+            autocomplete="off" 
+          />
+          <label for="credit">Credit card</label>
+        </div>
+        <div class="payment-method d-flex gap-2">
+          <img src="/assets/icons/carte-de-credit.png" alt="">
+          <img src="/assets/icons/carte.png" alt="">
+          <img src="/assets/icons/visa.png" alt="">
+        </div>
+      </div>
+
+      <!-- Dettagli carta di credito -->
+      <div [ngClass]="{ 'open-details-card': creditIsSelected }" class="card-details">
+        <input 
+          type="text" 
+          placeholder="Card Number" 
+          [(ngModel)]="cardNumber.value"
+          name="cardNumber" 
+          autocomplete="off"
+          [pattern]="cardNumberRegex"
+          maxlength="16"
+          #cardNumber="ngModel" 
+          required
+          [ngClass]="{ 'invalid-input': cardNumber.touched && cardNumber.invalid }"
+        />
+        <div *ngIf="cardNumber.touched && cardNumber.invalid" class="enter-card">
+          <small class="error" *ngIf="cardNumber.errors?.['required']">
+            Please enter Credit card number
+          </small>
+          <small class="error" *ngIf="cardNumber.errors?.['pattern']">
+            Please enter a valid Credit card number
+          </small>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Cardholder Name" 
+          [(ngModel)]="cardholderName.value" 
+          name="cardholderName" 
+          autocomplete="off" 
+          #cardholderName="ngModel"
+          required
+          [ngClass]="{ 'invalid-input': cardholderName.touched && cardholderName.invalid }"
+        />
+        <div *ngIf="cardholderName.touched" class="enter-card">
+          <small class="error" *ngIf="cardholderName.errors?.['required']">
+            Please enter your name
+          </small>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Expiration Date (MM/YY)" 
+          [(ngModel)]="expirationDate.value" 
+          name="expirationDate" 
+          autocomplete="off" 
+          required
+          #expirationDate="ngModel"
+          [pattern]="expirationDateRegex"
+          maxlength="5"
+          [ngClass]="{ 'invalid-input': expirationDate.touched && expirationDate.invalid }"
+        />
+        <div *ngIf="expirationDate.touched && expirationDate.invalid" class="enter-card">
+          <small class="error" *ngIf="expirationDate.errors?.['required']">
+            Please enter expiration date
+          </small>
+          <small class="error" *ngIf="expirationDate.errors?.['pattern']">
+            Please enter a valid expiration date
+          </small>
+        </div>
+        <input 
+          type="text" 
+          placeholder="CVV" 
+          [(ngModel)]="cvv" 
+          name="cvv" 
+          autocomplete="off" 
+          required
+          #cvvField="ngModel"
+          [pattern]="cvvRegex"
+          maxlength="4"
+          [ngClass]="{ 'invalid-input': cvvField.touched && cvvField.invalid }"
+        />
+        <div *ngIf="cvvField.touched && cvvField.invalid" class="enter-card">
+          <small class="error" *ngIf="cvvField.errors?.['required']">
+            Please enter cvv
+          </small>
+          <small class="error" *ngIf="cvvField.errors?.['pattern']">
+            Please enter a valid cvv
+          </small>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="credit-card" (click)="payPal()">
+        <input 
+          type="radio" 
+          id="paypal" 
+          name="credit" 
+          [(ngModel)]="paymentMethod" 
+          value="paypal" 
+          [checked]="palIsSelected" 
+        />
+        <label for="paypal">PayPal</label>
+      </div>
+
+      <!-- Dettagli PayPal -->
+      <div [ngClass]="{ 'open-details-card': palIsSelected }" class="pay-pal-details">
+        <img src="/assets/icons/pay-pal.png" alt="pay-pal">
+        <p>After clicking "Pay with PayPal", you will be redirected to PayPal to complete your purchase securely.</p>
+      </div>
+
+      <!-- Bottoni di pagamento -->
+      <button id="pay-now" *ngIf="creditIsSelected" class="credit-button" type="submit" >Pay Now</button>
+      <a *ngIf="palIsSelected" href="https://www.paypal.com">
+        <button class="pay-pal-button" type="button">Pay with <strong>PayPal</strong></button>
+      </a>
+    </form>
+  </div>
+
+  <div class="products gap-3">
+    <div *ngFor="let product of products" class="product d-flex gap-1">
+      <img [src]="'http://localhost:3000/uploads/products/' + product.category + '/' + product.brand + '/' + product.image_url" [alt]="product.name" class="product-image gap-3"/>
+      <p class="product-count">{{product.quantity}}</p>
+      <div class="check-detail gap-3">
+        <div class="product-info">
+          <p>{{ product.name }}</p>
+          <span>{{ product.size }}</span> 
+        </div>
+        <div class="product-price">
+      <p>{{ getTotalForProduct(product) | currency }}</p>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div class="discount d-flex gap-1">
+      <input 
+        type="text" 
+        id="discount" 
+        name="discount"
+        placeholder="Discount code or gift card"
+      />
+      <button type="button">Apply</button>
+    </div>
+
+    <div class="sub d-flex gap-1 justify-content-between">
+      <p>Subtotal:</p>
+      <p>{{subtotal | currency}}</p>
+    </div>
+
+    <div class="shipping d-flex gap-1 justify-content-between">
+      <p>Shipping</p>
+      <p>{{shipping}}</p>
+    </div>
+
+    <div class="total d-flex gap-1 justify-content-between">
+      <h5><strong>Total</strong></h5>
+      <p>{{total | currency}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,59 @@
+.key{
+    text-align: center;
+    overflow-x: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; 
+}
+
+h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.details{
+    width: 100%;
+}
+
+
+.details div{
+    width: 100%;
+    overflow: hidden; 
+}
+
+.details img{
+    transition: transform 5s linear, opacity 0.3s linear; 
+    width: 100%;
+    height: auto;
+}
+
+.details img:hover {
+    transform: scale(1.2);
+}
+
+h5{
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p{
+    font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+    .key {
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        overflow-x: auto;
+    }
+
+    .details {
+        flex: 0 0 60%;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        display: none; 
+    }
+}

@@ -1,0 +1,18 @@
+.main-thank-you{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    outline: none;
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cta{
+    margin-bottom: 10px;
+}

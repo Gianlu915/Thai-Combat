@@ -1,80 +1,23 @@
-<<<<<<< HEAD
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-    
-      <a class="navbar-brand" href="#">
-        <img src="assets/icons/muay-thai.png" alt="Logo">
-      </a>
-  
-   
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-    
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav d-flex mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">New in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Gloves</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Shorts</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Sports
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Muay Thai</a></li>
-              <li><a class="dropdown-item" href="#">Kickboxing</a></li>
-              <li><a class="dropdown-item" href="#">Boxe</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Deals</a>
-          </li>
-        </ul>
-      </div>
-  
-      <!-- Sezione a destra con input e icone -->
-     
-      <div class=" justify-content-between gap-4 nav-icons">
-        <a href="#"><img src="assets/icons/search-interface-symbol.png" alt=""></a>
-        <a href=""><img src="assets/icons/market.png" alt="Cart"></a>
-        <a href=""><img src="assets/icons/user.png" alt="Sign or Register"></a>
-      </div>
-
-    </div>
-  </nav>
-  
-=======
 <nav class="navbar navbar-expand-md">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/icons/muay-thai.png" alt="Logo">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <h3 class="mb-0 me-2">THAI-COMBAT</h3>
+      <img src="/assets/icons/muay-thai.png" alt="Muay Thai Logo" id="thai-logo">
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Hamburger Toggle -->
+    <button class="navbar-toggler" type="button" (click)="closeNav()" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-     
+    <!-- Navbar Collapse -->
+    <div class="collapse navbar-collapse" [class.show]="!isNavbarCollapsed" id="navbarNav">
       <ul class="navbar-nav d-flex mx-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/']" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">New in</a>
+          <a class="nav-link" (click)="closeNav()">New in</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" [routerLink]="['/products/category/gloves']">Gloves</a>
+          <a class="nav-link" [routerLink]="['/products/category/gloves']" (click)="closeNav()">Gloves</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" [routerLink]="['/products/category/gloves/brand/yokkao']">Yokkao</a></li>
             <li><a class="dropdown-item" [routerLink]="['/products/category/gloves/brand/leone']">Leone</a></li>
@@ -82,7 +25,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" [routerLink]="['/products/category/shorts']" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shorts</a>
+          <a class="nav-link" [routerLink]="['/products/category/shorts']" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="closeNav()">Shorts</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" [routerLink]="['/products/category/shorts/brand/yokkao']">Yokkao</a></li>
             <li><a class="dropdown-item" [routerLink]="['/products/category/shorts/brand/leone']">Leone</a></li>
@@ -90,9 +33,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Sports
-          </a>
+          <a class="nav-link" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="closeNav()">Sports</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Muay Thai</a></li>
             <li><a class="dropdown-item" href="#">Kickboxing</a></li>
@@ -100,36 +41,35 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Deals</a>
+          <a class="nav-link" (click)="closeNav()">Deals</a>
         </li>
       </ul>
-
     </div>
 
-    <!-- Icons -->
-    <div class="nav-icons gap-4">
-      <a (click)="toogleSearch()" href="#"><img src="assets/icons/search-interface-symbol.png" alt=""></a>
-      <span class="cart-items">0</span>
-      <a href="#"><img src="assets/icons/market.png" alt="Cart"></a>
-      <a href="#"><img src="assets/icons/user.png" alt="Sign or Register"></a>
+    <!-- Desktop Icons (Hidden on mobile) -->
+    <div class="nav-icons gap-4 d-md-flex d-none">
+      <span class="user-name" *ngIf="userName">{{"Hi " + userName}} </span>
+      <a (click)="toogleSearch()"><img src="assets/icons/search-interface-symbol.png" alt="Search"></a>
+      <span [ngClass]="userName ? 'cart-items-span' : 'cart-items'">{{cartItemCount}}</span>
+      <a href="#" [routerLink]="['/products/checkout']"><img src="assets/icons/market.png" alt="Cart"></a>
+
+      <a *ngIf="userName" [routerLink]="['/']"><img src="/assets/icons/logout.png" alt="logout" (click)="logout()"></a>
+      <a *ngIf="!userName" [routerLink]="['/login']"><img src="assets/icons/user.png" alt="Sign or Register"></a>
+    </div>
+
+    <!-- Mobile Menu Icons, Inside Burger Menu -->
+    <div class="nav-icons-mobile d-md-none d-flex gap-3">
+      <span id="user-name">{{userName}}</span>
+      <a (click)="toogleSearch()" class="search-icon">
+        <img src="assets/icons/search-interface-symbol.png" alt="Search">
+      </a>
+      <a class="cart-icon" [routerLink]="['/products/checkout']">
+        <img src="assets/icons/market.png" alt="Cart">
+        <span class="cart-items">{{cartItemCount}}</span>
+      </a>
+      <a [routerLink]="['/login']" class="user-icon">
+        <img src="assets/icons/user.png" alt="Sign or Register">
+      </a>
     </div>
   </div>
 </nav>
-
-<div [ngClass]="{'visible': isSearchVisible}" class="search-container d-flex justify-center align-items-center justify-content-between">
-  <div class="d-flex gap-2 search-input">
-    <a href="#" class="search-icon">
-      <img src="assets/icons/search-interface-symbol.png" alt="Search">
-    </a>
-    <input type="text" placeholder="SEARCH FOR..." id="searchInput" #searchInput>
-  </div>
-  <div>
-    <a (click)="toogleSearch()" href="#" class="search-icon">
-      <img src="assets/icons/clear.png" alt="Clear">
-    </a>
-  </div>
-</div>
-
-
-
->>>>>>> homepage

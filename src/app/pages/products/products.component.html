@@ -1,7 +1,55 @@
-<main class="container" style="margin-top: 100px;">
+<div class="container desc">
+<div *ngIf="category" class="d-flex justify-content-center">
+  <h5 class="mb-5">Muay Thai {{ category.charAt(0).toUpperCase() + category.slice(1).toLowerCase() }}</h5>
+</div>
+
+<!-- 'gloves' -->
+<div *ngIf="category === 'gloves'">
+  <p *ngIf="!brand">Thai-Combat high-quality Muay Thai boxing gloves are designed to provide maximum protection and unmatched comfort. Our world-class Muay Thai boxing gloves are the best choices for training, sparring, and in actual fighting. They are perfect for beginners, casual practitioners, and actual fighters. Buyers are assured of getting the best quality <a>. . . Read More</a></p>
+
+  <div *ngIf="brand == 'leone'">
+    <p>Leone boxing gloves offer exceptional durability, comfort, and protection, designed specifically for athletes who demand the best. These gloves feature high-quality materials for both sparring and competitive fights. Crafted with a perfect balance between power and comfort, they are ideal for both beginners and professional fighters. Whether you're training or competing, Leone gloves ensure superior performance, giving you the edge you need in the <a>. . . Read More</a></p>
+  </div>
+
+  <div *ngIf="brand == 'fairtex'">
+    <p>Fairtex boxing gloves are known for their excellent craftsmanship and precision design. Perfect for Muay Thai, kickboxing, and boxing, these gloves offer unbeatable comfort and durability. With a focus on safety and performance, Fairtex gloves provide maximum wrist support and hand protection. Whether you're sparring, training, or fighting, Fairtex ensures that you get the best out of every <a>. . . Read More</a></p>
+  </div>
+
+  <div *ngIf="brand == 'yokkao'">
+    <p>Yokkao boxing gloves are a symbol of strength and style in the combat sports world. These gloves are engineered for high performance, with advanced technology providing superior padding and protection for the hands and wrists. Designed with the fighter in mind, Yokkao gloves offer excellent shock absorption and a comfortable fit, making them perfect for both intense training and competition. Step into the ring with confidence and style with Yokkao box <a>. . . Read More</a></p>
+  </div>
+</div>
+
+
+
+<!-- 'shorts' -->
+<div *ngIf="category == 'shorts'">
+  <p *ngIf="!brand">Our premium quality shorts are designed for maximum comfort and style. Perfect for both training and leisure, they offer breathable fabrics that keep you cool and comfortable throughout your workout or daily activities. Available in a variety of colors and sizes, these shorts combine durability with flexibility, making them a versatile choice for all your athletic needs. Whether you're hitting the gym, going for a run, or simply relaxing, these shorts have got you covered. <strong>Stay active and stylish with every move!</strong></p>
+
+  <div *ngIf="brand == 'yokkao'">
+    <p>Yokkao Muay Thai shorts combine functionality with modern style, providing the ultimate comfort and flexibility for Muay Thai fighters. Made from durable, high-quality satin, these shorts are designed to withstand the toughest training and competition environments. The unique designs and colors reflect the strength and determination of every fighter. With a perfect fit and the freedom to move, Yokkao shorts are the perfect addition to any <a>. . . Read More</a></p>
+  </div>
+  
+  <div *ngIf="brand == 'leone'">
+    <p>Leone Muay Thai shorts are designed to offer maximum comfort and flexibility while maintaining a stylish appearance. Crafted with lightweight and breathable materials, these shorts allow for a full range of motion, making them perfect for intense training sessions or competitive bouts. The high-quality fabric ensures durability, while the vibrant design and traditional Thai patterns make them a standout choice for <a>. . . Read More</a></p>
+  </div>
+  
+  <div *ngIf="brand == 'fairtex'">
+    <p>Fairtex Muay Thai shorts are known for their superior craftsmanship and ergonomic design. Made from lightweight satin material, these shorts offer unmatched flexibility and comfort during even the most intense training sessions. The high waistband ensures a secure fit, while the bold, distinctive Fairtex logo adds a touch of style. Ideal for Muay Thai practitioners, these shorts allow you to move freely and comfortably, whether you're training <a>. . . Read More</a></p>
+  </div>
+</div>
+</div>
+
+<app-filter-bar></app-filter-bar>
+
+<div *ngIf="noProductsFound" class="no-products-message">
+  <p>Nessun prodotto trovato con i filtri applicati.</p>
+</div>
+
+<main class="container">
   <div class="grid-container">
     <div *ngFor="let product of products">
-      <app-product [product]="product"></app-product>
+      <app-product [product]="product" [routerLink]="['/products/productName', product.id]"></app-product>
     </div>
   </div>
 </main>

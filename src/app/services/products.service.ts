@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Product } from '../models/products.model';
 
 @Injectable({
@@ -59,5 +59,33 @@ export class ProductsService {
   isValidBrand(brand: string): boolean {
     return this.brands.includes(brand);
   }
+
+  getProductCount(category: string, brand:string){
+    return this.getFilteredProducts(category, brand).pipe(
+      map(products => products.length)
+    )
+  }
+
+  private priceFiltersSubject = new BehaviorSubject({
+    under50: false,
+    '50to100': false,
+    over100: false
+  });
+
+  get priceFilters$() {
+    return this.priceFiltersSubject.asObservable();
+  }
+
+  // Setter per aggiornare i filtri
+  setPriceFilters(filters: any) {
+    this.priceFiltersSubject.next(filters);
+  }
+
+
+  filterProductsById(id: number):Observable <Product> {
+    return this.http.get<Product>(`${this.apiUrl}/api/products/${id}`);
+  }
+
+
 
 }
