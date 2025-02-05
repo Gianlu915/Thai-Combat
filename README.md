@@ -1,27 +1,27 @@
-# ThaiCombat
+Thai-Combat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+Description:
 
-## Development server
+This is a responsive e-commerce platform for martial arts products. Users can browse products, filter them based on different criteria, and simulate a purchase. The project is built using modern web technologies to provide a seamless user experience.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Technologies Used:
 
-## Code scaffolding
+Frontend: HTML, CSS, JavaScript, Bootstrap, Angular
+Backend: Node.js, MAMP
+Database: MySQL (managed with phpMyAdmin)
+Authentication: User registration and authentication are handled using MySQL and PHPMyAdmin
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Features:
 
-## Build
+Product Listing: View a variety of martial arts products
+Filtering System: Filter products based on different categories
+Shopping Simulation: Users can add items to their cart and simulate a checkout
+User Authentication: Users can register and log in, with their data stored in a MySQL database
+Responsive Design: The platform is optimized for mobile and desktop devices
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+How to Open the Project:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Clone the repository and set up the project locally with the necessary tools (MAMP, MySQL, Angular).
+Start the backend using MAMP and ensure MySQL is running.
+Run the Angular frontend using ng serve.
+Open the application in your browser at http://localhost:4200.
