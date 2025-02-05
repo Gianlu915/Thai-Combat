@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]="'http://localhost:3000/uploads/products/' + product.category + '/' + product.brand + '/' + product.image_url" 
+       class="card-img-top" 
+       alt="Product Image">
+  
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <p class="card-text">Price: {{ product.price | currency }}</p>
+  </div>
+</div>

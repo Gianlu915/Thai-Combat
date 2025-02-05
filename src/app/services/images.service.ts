@@ -16,4 +16,7 @@ export class ImagesService {
     return this.http.get<string[]>(url);
   }
 
+  getFullImageUrl(imagePath: string): string {
+    return `${this.apiUrl}${imagePath}`; // Combina il dominio base con il percorso relativo
+  }
 }

@@ -1,0 +1,35 @@
+h3{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main-best-seller {
+  position: relative; /* Necessario per posizionare i dots */
+  overflow-x: hidden; /* Nascondi solo l'overflow orizzontale */
+}
+
+.slick-slider {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product {
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.slick-slider .product-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto; 
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product{
+  border-radius: 5px;
+}

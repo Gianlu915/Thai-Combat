@@ -1,0 +1,18 @@
+.slick-prev::before, .slick-next::before{
+    color: black !important;
+}
+
+.carousel {
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%; /* Il contenitore occupa tutta la larghezza disponibile */
+    overflow: hidden; /* Nasconde eventuali porzioni di immagine fuori dal contenitore */
+  }
+
+  .slider img {
+    width: 100%; /* Le immagini occupano tutta la larghezza del contenitore */
+    height: 100%; /* Le immagini occupano tutta l'altezza del contenitore */
+    object-fit: cover;
+  }

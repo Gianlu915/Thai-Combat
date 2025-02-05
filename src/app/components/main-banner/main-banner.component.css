@@ -1,9 +1,22 @@
 .card{
     border-radius: 5px;
     background-color: #fffaedb6;
+<<<<<<< HEAD
 }
 
 .card img {
+=======
+    height: auto;
+    background-color: black;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card img {
+    height: 500px;
+>>>>>>> homepage
     max-height: 100%;
     object-fit: fill;
 }
@@ -11,5 +24,80 @@
 .card button{
     background-color: rgb(15, 169, 118);
     border-color:rgb(10, 150, 100);
+<<<<<<< HEAD
     width: 60%;
+=======
+    width: 40%;
+    border-radius: 1px;
+}
+
+.card button:hover{
+    background-color: rgb(204, 255, 194);
+    border-color: black;
+    color: black;
+}
+
+@media(max-width: 1199px){
+
+    .col-md-4 {
+        flex: 0 0 50%; /* Ogni card occupa il 50% della larghezza */
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .col-md-4:nth-child(3) {
+        flex: 0 0 50%; /* La terza card occupa tutta la riga */
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 991px){
+    .col-md-4 {
+        flex: 0 0 50%; /* Ogni card occupa il 50% della larghezza */
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .card{
+        border-radius: 5px;
+        background-color: #fffaedb6;
+        height: 400px;
+        background-color: black;
+    }
+
+    .card img {
+        height: 300px;
+        max-height: 100%;
+        object-fit: fill;
+    }
+}
+
+@media(max-width: 715px){
+    .card{
+        height: 370px;
+    }
+
+}
+
+@media(max-width: 550px){
+
+    .card{
+        height: auto;
+    }
+    
+    .card img{
+        height: auto;
+    }
+
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .col-md-4:nth-child(3) {
+        flex: 0 0 100%; /* La terza card occupa tutta la riga */
+        max-width: 100%;
+    }
+>>>>>>> homepage
 }

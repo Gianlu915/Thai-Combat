@@ -1,12 +1,24 @@
+<<<<<<< HEAD
 <div class="container main-banner">
+=======
+<div class="container main-banner mt-5">
+>>>>>>> homepage
   <div class="row">
     <div class="col-md-4" *ngFor="let item of bannerItems">
       <div class="card">
         <img [src]="item.image" class="card-img-top" alt="Banner Image">
         <div class="card-body d-flex justify-content-center align-items-center">
+<<<<<<< HEAD
           <button class="btn btn-primary">{{item.buttonName}}</button>
+=======
+          <button [routerLink]="['/products/brand', item.buttonName]" class="btn btn-primary">{{item.buttonName}}</button>
+>>>>>>> homepage
         </div>
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> homepage

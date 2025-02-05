@@ -9,6 +9,21 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MainBannerComponent } from './components/main-banner/main-banner.component';
+<<<<<<< HEAD
+=======
+import { MainSliderComponent } from './components/main-slider/main-slider.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import {MatCardModule} from '@angular/material/card';
+import { ProductsComponent } from './pages/products/products.component';
+import { FlashDealsComponent } from './components/flash-deals/flash-deals.component';
+import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
+import { TrainingCourseComponent } from './components/training-course/training-course.component';
+import { NewsComponent } from './components/news/news.component';
+import { TrustUsComponent } from './components/trust-us/trust-us.component';
+import { ProductComponent } from './components/product/product.component';
+
+
+>>>>>>> homepage
 
 @NgModule({
   declarations: [
@@ -16,14 +31,33 @@ import { MainBannerComponent } from './components/main-banner/main-banner.compon
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
+<<<<<<< HEAD
     MainBannerComponent
+=======
+    MainBannerComponent,
+    MainSliderComponent,
+    ProductsComponent,
+    FlashDealsComponent,
+    BestSellersComponent,
+    TrainingCourseComponent,
+    NewsComponent,
+    TrustUsComponent,
+    ProductComponent
+>>>>>>> homepage
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule
+=======
+    HttpClientModule,
+    SlickCarouselModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [
+>>>>>>> homepage
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

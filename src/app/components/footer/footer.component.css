@@ -1,0 +1,67 @@
+.main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #f9a825;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section ul li:hover {
+    color: #f9a825;
+    cursor: pointer;
+  }
+  
+  .footer-section address {
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .newsletter-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #f9a825;
+    color: #222;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #ffa726;
+  }
+  
