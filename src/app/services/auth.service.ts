@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -10,7 +11,7 @@ export class AuthService {
   userName$ = this.userNameSubject.asObservable();
 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   setUserName(name:string){
     this.userNameSubject.next(name);
@@ -27,4 +28,8 @@ export class AuthService {
   logoutUser(): void {
     this.userNameSubject.next('');
   }
+
+
+
+
 }

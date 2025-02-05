@@ -1,7 +1,7 @@
 <main>
 
     <!-- Sezione di Login -->
-    <div class="log">
+    <div class="log" *ngIf="!access">
       <h2>Login</h2>
   
       <p>Enter your email and password to login:</p>
@@ -12,7 +12,7 @@
             type="email"
             id="email"
             name="email"
-            [(ngModel)]="loginEmail"
+            [(ngModel)]="email"
             placeholder="E-mail"
             required
           />
@@ -24,7 +24,7 @@
             type="password"
             id="password"
             name="password"
-            [(ngModel)]="loginPassword"
+            [(ngModel)]="password"
             placeholder="Password"
             required
           />
@@ -34,6 +34,10 @@
   
         <p>Don't have an account?&nbsp;<a [routerLink]="['/register']">Sign up</a></p>
       </form>
+    </div>
+
+    <div *ngIf="access" class="welcome-back">
+      <h3>Welcome back, {{ userName }}! We're happy to see you again.</h3>
     </div>
   
    

@@ -24,6 +24,8 @@
 .checkout-main{
     margin-top: 50px;
     margin-bottom: 100px;
+    flex-direction: row;
+    display: flex;
 }
 
 .contacts{
@@ -382,4 +384,19 @@
 
 }
 
+
+@media(max-width: 580px){
+  .checkout-main{
+    flex-direction: column;
+  }
+
+  .contacts{
+    width: 100%;
+  }
+
+  .products{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
 
