@@ -65,7 +65,7 @@ margin-right: 9px;
 .show-options{
     position: absolute;
     width: 180px;
-    top: 50.8%;
+    top: 389px;
     left: 70%;
     background-color: #f5f5f5c4;
     z-index: 10;
@@ -97,12 +97,41 @@ input,label{
     transition: transform 0.3s ease;
 }
 
+@media(max-width: 1399px) {
+    .show-options{
+        position: absolute;
+        width: 180px;
+        top: 100px;
+        left: 70%;
+        background-color: #f5f5f5c4;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media(max-width: 1409px) {
+    .show-options{
+        position: absolute;
+        width: 180px;
+        top: 415px;
+        left: 70%;
+        background-color: #f5f5f5c4;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
 @media(max-width: 991px) {
     .main-filter > div{
         border-right: 1px solid black;
         text-align: center;
         box-sizing: border-box;
         padding: 7px;
+    }
+
+    .show-options{
+        top: 440px;
+        left: 70%;
     }
 }
 
@@ -135,6 +164,36 @@ input,label{
 
     .icons img{
         width: 15px;
+    }
+
+    .show-options{
+        top: 481px;
+        left: 17.5%;
+        width: 30%;
+    }
+}
+
+@media(max-width: 491px) {
+    .show-options{
+        top: 507px;
+        left: 17.5%;
+        width: 30%;
+    }
+}
+
+@media(max-width: 445px) {
+    .show-options{
+        top: 529px;
+        left: 17.5%;
+        width: 30%;
+    }
+}
+
+@media(max-width: 397px) {
+    .show-options{
+        top: 553px;
+        left: 17.5%;
+        width: 35%;
     }
 }
 
